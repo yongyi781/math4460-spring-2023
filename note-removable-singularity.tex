@@ -1,0 +1,43 @@
+\documentclass[12pt,oneside]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsthm,parskip,mathtools,microtype}
+
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\bC}{\mathbb C}
+
+\title{Note about the removable singularity theorem\\
+MATH4460 Spring 2023}
+\begin{document}
+\maketitle
+
+Recall the removable singularity theorem:
+\begin{theorem}
+  If $\Omega\subseteq\bC$ is an open set, $a\in\Omega$, and $f$ is a holomorphic on $\Omega-\{a\}$, and
+  \[\lim_{z\to a}(z-a)f(z)=0,\]
+  then $\lim_{z\to a}f(z)$ exists and there is a unique extension of $f$ to a holomorphic function on $\Omega$.
+\end{theorem}
+
+I gave a very brief sketch of a proof in lecture, so I will give a more detailed proof here.
+\begin{proof}
+  For each $z\in\Omega$ we choose a circle $C$ about $a$, small enough so that $C$ and its inside are contained in $\Omega$, and let $D$ denote the inside of $C$. Define $g\colon D\to\bC$ by
+  \[g(z)=\frac 1{2\pi i}\int_{C}\frac{f(\zeta)}{\zeta-z}\,d\zeta\quad\text{for all }z\in D.\]
+  By Cauchy's integral formula, $g$ is holomorphic on $D$ and agrees with $f$ inside $D-\{a\}$. So the picture is that $f$ is defined on $\Omega-\{a\}$, and $g$ is defined on $D\subseteq \Omega$, and $f\equiv g$ on $D-\{a\}$. If we use the value of $g(a)$ to plug in the hole of $f$ at $a$ (i.e.\ define $f(a)$ to be $g(a)$), the previous sentence tells us that $f$ is now holomorphic on all of $\Omega$.
+\end{proof}
+On Wednesday, I asked the question of why we needed the hypothesis that $\lim_{z\to a}(z-a)f(z)=0$. It appears we did not use it in the proof\ldots. This was a question to myself too, as I realized on the spot I did not have an answer.
+
+It turns out the answer is more subtle than what I could come up with on the spot! Before stating the answer, let's see what happens if we take an example that does not satisfy the limit hypothesis. The obvious example is $f(z)=\frac 1z$, and taking $a=0$. Then $\lim_{z\to a}(z-a)f(z)=\lim_{z\to 0}z/z=1$, not 0, so the theorem should not apply. Indeed, the singularity at 0 is a pole of order 1, which is evidently not removable.
+
+So what does $g(z)$ from the proof look like in this case? It looks like this:
+\[g(z)=\frac 1{2\pi i}\int_C \frac 1{\zeta(\zeta-z)}\,d\zeta,\]
+Let's use partial fractions, but note that partial fractions only applies for $z\neq 0$! Indeed for $z=0$ the integrand is simply $1/\zeta^2$ for which partial fractions does not apply. We directly calculate $g(0)=0$. Now with 0 out of the way, let's focus on $z\neq 0$. For $z\neq 0$ we get the expression
+\[g(z)=\frac 1{2\pi i}\cdot\frac 1z\left(\int_C \frac {d\zeta}{\zeta-z}-\int_C\frac{d\zeta}{\zeta}\right)=\frac 1z(n(C,z)-n(C,0)).\]
+Since $g$ is defined on $D$ (the interior of $C$), $n(C,z)=1$ for all $z$ in the domain of definition of $g$. Moreover, $n(C,0)=1$ as well since $C$ was a circle around 0. Thus, $g$ is the zero function! This definitely does \emph{not} agree with $f(z)=1/z$ on $D-\{0\}$. So Cauchy's formula did not work here.
+
+This is the answer: Cauchy's formula works if $f(z)$ be holomorphic inside all of $D$. With a singularity at $a$, we don't have this. However, Ahlfors gives a slightly weaker hypothesis under which Cauchy's formula still works, which is Theorem 5 on page 113. The weaker hypothesis is that $f$ must be holomorphic inside $\Omega$ except possibly for a finite number of points $z_j$, and for each point $z_j$, it must be the case that
+\[\lim_{z\to z_j}(z-z_j)f(z)=0.\]
+This is why the limit hypothesis was needed!
+
+\end{document}

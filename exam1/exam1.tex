@@ -1,0 +1,89 @@
+\documentclass[11pt,oneside]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,parskip,mathtools,microtype}
+\usepackage[shortlabels]{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\eps}{\varepsilon}
+
+\DeclareMathOperator{\Var}{Var}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\ord}{ord}
+
+\title{MATH4460 Spring 2023\\
+Exam 1}
+\author{Wednesday, March 1, 2023}
+
+\begin{document}
+\maketitle
+
+Name: \underline{\hspace{6cm}}
+
+This exam is open notes, but calculators are not allowed. There are 50 points total in this exam. If you do not manage to solve a problem, show a strategy you tried and a reflection on why it did not work, for partial credit.
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item (3 points) Sketch, in the complex plane, the set of complex numbers $z$ such that $1<\Arg(z)<2$. You may want to recall that $\pi\approx 3.14$.
+    \vfill
+    \item (3 points) Let $f(z)=\frac{z^5-1}{z^2-5z+6}$. List all pairs $(a,\ord_a f)$ for $a$ in $\widetilde\bC$ (the extended complex plane, aka the Riemann sphere) such that $\ord_a f\neq 0$. What is $\sum_{a\in\widetilde\bC}\ord_a f$?
+    \vfill
+    \item (4 points) Let's call a complex number $z$ a \emph{fizzbuzz} if $z$ is a 15th root of unity which is neither a 3rd root of unity nor a 5th root of unity. List all the fizzbuzzes, in polar form.
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item (5 points) Prove that $\overline z^2=\overline{z^2}$ for all $z\in\bC$, in any way you like.
+    \vfill
+    \item (5 points) Prove or disprove that $\overline z^2$ is a holomorphic function on $\bC$.
+    \vfill
+  \end{enumerate}
+\end{problem}
+\newpage
+
+\begin{problem}[10 points]
+  Let $D=\{z\in\bC:|z|<1\}$. Prove that the function $f(z)=z^3$ maps $D$ to $D$, and that $f$ is a surjection.\footnote{A function $f$ from $X$ to $Y$ is a surjection if for all $y\in Y$, there exists $x\in X$ such that $f(x)=y$.}
+\end{problem}
+
+\newpage
+
+\begin{problem}
+\leavevmode\begin{enumerate}[(a)]
+\item (5 points) Prove that $\cos z\neq 0$ for any $z\in\bC$ with $\Im z\neq 0$.
+\vfill
+\item (5 points) What is $\log(\frac12\exp(\frac 12\log(\frac12\exp(7+11i))))$?
+\vfill
+\end{enumerate}
+\end{problem}
+\newpage
+
+\begin{problem}
+  Let $\displaystyle f(z)=\frac{1}{(z-1)(z-5)^3}$.
+  \begin{enumerate}[(a)]
+     \item (5 points) There is a unique complex number $a$ such that we can write $f(z)$ as
+    \[f(z)=\frac a{z-1}+g(z)\]
+    where $g(z)$ is a rational function that does not have a pole at $z=1$. What is $a$?
+    \vfill
+    \item (5 points) Let $\gamma$ be the circle $|z-1|=\frac 12$, traversed counterclockwise. With the help of part (a), find
+    \[\int_\gamma f(z)\,dz.\]
+    If you could not find the value of $a$ in part (a), express your answer in terms of $a$.
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\end{document}

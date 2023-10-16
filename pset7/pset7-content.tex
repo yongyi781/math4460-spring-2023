@@ -1,0 +1,81 @@
+\maketitle
+
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}}}
+
+This problem set is due on Wednesday, March 29 at 11:59 pm. Each problem part is worth 3 points. Collaboration is encouraged. In all cases, you must write your own solutions, and and you must cite collaborators and resources used.
+
+% \begin{problem}
+%   We saw in class the implication ``open map'' $\implies$ ``no local maximum.'' In this problem we'll try to understand this implication better by looking at an example of a non-holomorphic function which does have a local maximum.
+%   \begin{enumerate}[(a)]
+%     \item Let $f\colon\bC\to\bC$ be defined by
+%     \[f(z)=\frac{z+1}{1+|z|^2}.\]
+%     Find where $|f(z)|$ has a local maximum.
+%     \item It follows from the implication ``open map'' $\implies$ ``no local maximum'' that $f$ is not an open map. Give (with proof) an explicit open set $\Omega\subseteq\bC$ such that $f(\Omega)$ is not open.
+%   \end{enumerate}
+% \end{problem}
+
+\begin{problem}
+  Give another proof of the fundamental theorem of algebra using the maximum modulus principle in several steps:
+  \begin{enumerate}[(a)]
+    \item Let $\Omega\subset\bC$ be an open set and $f\colon\Omega\to\bC$ be holomorphic and non-constant. The maximum modulus principle states that $|f|$ has no local maxima.
+    
+    Prove that $|f|$ has no local minima, except at zeros of $f$. Why did we need to say ``except at zeros of $f$''?
+    \item Prove that for any \textbf{continuous} function $f\colon\bC\to\bC$ such that $\lim_{z\to\infty}f(z)=\infty$, $|f|$ has a global minimum.
+    
+    \emph{Hint}: Start by picking a number $a>0$ in the range of $|f|$, and then pick a radius $R$ such that $|f(z)|>a$ for all $|z|>R$. Then use the multi-dimensional extreme value theorem.
+    \item Prove the fundamental theorem of algebra using parts (a) and (b).
+    
+    \emph{Hint}: Take $\Omega$ to be $\bC$. Use the fact that a global minimum on $\bC$ is also a local minimum on $\bC$.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Find the residues of the following functions at the following places:
+  \begin{enumerate}[(a)]
+    \item $f(z)=(z^2+1)/z$ at $z=0$.
+    \item $(2z+1)/(z(z^3-5))$ at $z=0$.
+    \item $\sin z/z^4$ at $z=0$.
+    \item $1/(z^n-1)$ at $z=1$, where $n$ is a positive integer. (This is a bit more challenging than the previous parts.)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item Calculate
+    \[\int_C\frac 1{z^4-1}\,dz\]
+    where $C$ is a circle of radius 1/2 centered at $i$ (oriented counterclockwise).
+    \item Calculate
+    \[\int_C\frac 1{z^2-3z+5}\,dz\]
+    where $C$ is the rectangle shown in the figure. (Note the orientation!)
+    \begin{center}
+      \begin{tikzpicture}[scale=0.7]
+        \draw[->] (-2,0) -- (11,0);
+        \draw[->] (0,-1) -- (0,5);
+        \draw[->-=.5] (0,0) -- (0,4);
+        \draw[->-=.5] (0,4) -- (10,4);
+        \draw[->-=.5] (10,4) -- (10,0);
+        \draw[->-=.5] (10,0) -- (0,0);
+        \node[below left] at (0,0) {0};
+        \node[left] at (0,4) {$4i$};
+        \node[below] at (10,0) {10};
+      \end{tikzpicture}
+    \end{center}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Let $z_1,\dots,z_n$ be distinct complex numbers. With the help of residues, determine explicitly the partial fraction decomposition (i.e.\ the numbers $a_i$):
+  \[\frac 1{(z-z_1)\cdots(z-z_n)}=\frac{a_1}{z-z_1}+\cdots+\frac{a_n}{z-z_n}.\]
+\end{problem}
+
+\begin{problem}
+  Prove that if $f(z)$ is a holomorphic function and $a$ is either in the domain of $f$ or is a pole of $f$, then
+  \[\ord_a f=\Res_a(f'/f),\]
+  and furthermore if $a$ is a zero or pole of $f$, then $a$ is a simple pole of $f'/f$.
+\end{problem}
+
+\begin{problem}
+  This is a space to reflect on something about this problem set. You can mention if you found any problems particularly difficult, or particularly easy. You can also mention problems you liked, or problems that took a long time, etc. (Please write something here to get credit!)
+\end{problem}

@@ -1,0 +1,97 @@
+\documentclass[11pt,oneside]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,parskip,mathtools,microtype}
+\usepackage[shortlabels]{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\eps}{\varepsilon}
+
+\DeclareMathOperator{\Var}{Var}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Res}{Res}
+
+\title{MATH4460 Spring 2023\\
+Exam 2}
+\author{Wednesday, April 19, 2023}
+
+\begin{document}
+\maketitle
+
+Name: \underline{\hspace{6cm}}
+
+This exam is open notes, but calculators are not allowed. There are 50 points total in this exam. If you do not manage to solve a problem, show a strategy you tried and a reflection on why it did not work, for partial credit.
+
+\begin{problem}
+  For each of the following meromorphic functions, list \textbf{all singularities on the extended complex plane} $\widetilde\bC$, and for each one state whether it is a removable singularity, a pole, or essential singularity. In addition, for each pole, state what order the pole is.
+  \begin{enumerate}[(a)]
+    \item (3 points) $\dfrac{1}{z}$
+    \vfill
+    \item (3 points) $\sec^3 z$
+    \vfill
+    \item (4 points) $\dfrac{z}{e^z-1}$
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Let $f(z)=\dfrac{1}{(z-1)(z-5)}$. Any series below should be given as a summation or with enough terms that the pattern is easily visible.
+  \begin{enumerate}[(a)]
+    \item (3 points) Give the Laurent series expansion of $f(z)$ around $z=1$ which converges at $z=1.001$, and state its region of convergence.
+    \vfill
+    \item (3 points) Give the Laurent series expansion of $f(z)$ around $z=1$ which converges at $z=100$, and state its region of convergence.
+    \vfill
+    \item (4 points) Find $\Res_\infty f(z)\,dz$ in at least 2 different ways.
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Integrals. \emph{Hint}: Neither problem should involve heavy computations if done right.
+  \begin{enumerate}[(a)]
+    \item (5 points) Compute $\displaystyle\int_{|z-1|=2} \frac{e^{2z}}{(z-1)(z-5)^n}\,dz$ in terms of the positive integer $n$.
+    \vfill
+    \item (5 points) Compute $\displaystyle\int_\gamma\cot z\,dz$ where $\gamma$ is the rectangle with corners $\pm\frac{99\pi}4\pm 100i$, traversed counterclockwise.
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}[10 points]
+  Compute
+  \[\int_{-\infty}^\infty\frac{a}{x^2+b}\,dx\]
+  in terms of the real numbers $a,b>0$.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Let $a\in\bC$, let $f$ be holomorphic at $a$, and let $g$ be meromorphic with an isolated pole at $a$.
+  \begin{enumerate}[(a)]
+    \item (5 points) If the pole of $g$ at $a$ is simple, prove that
+    \[\Res_{a}(f(z)g(z)\,dz)=f(a)\cdot \Res_{a}g(z)\,dz,\]
+    i.e.\ that the residue of $f(z)g(z)$ at $z=a$ is equal to $f(a)$ times the residue of $g(z)$ at $z=a$.
+    \vfill
+    \item (5 points) Give, with proof, a counterexample to the equation in part (a) if we remove the hypothesis that $g$ has a simple pole at $a$.
+    \vfill
+  \end{enumerate}
+\end{problem}
+
+\end{document}

@@ -4,3 +4,4 @@
 *.synctex.gz
 
 !LinearAlgebraNotes.pdf
+.DS_Store

@@ -1,0 +1,212 @@
+\documentclass[11pt,oneside]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,parskip,mathtools,microtype}
+\usepackage[shortlabels]{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{remark}{Remark}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\eps}{\varepsilon}
+
+\DeclareMathOperator{\Var}{Var}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+
+\title{MATH4460 Spring 2023\\
+Exam 2 Review}
+
+\begin{document}
+\maketitle
+
+The following problems are about series. Please prioritize these problems since you have not had a problem set about Taylor or Laurent series.
+
+\begin{problem}
+  Calculate the first 3 nonzero terms of the Taylor series of the following:
+  \begin{enumerate}[(a)]
+    \item $\cos z$ around $z=0$.
+    \item $\cos z$ around $z=\pi$.
+    \item $\cos z$ around $z=\pi/2$. Compare this to the Taylor series of $\sin z$ around $z=\pi$.
+    \item $\sin z\cos z$ around $z=0$.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item If $f$ is holomorphic, $f(0)\neq 0$, and you know the Taylor series for $f(z)$ around 0, discuss how to find the first few terms of the Taylor series of $1/f(z)$ around 0. (\emph{Hint}: Set up an equation of the form $f(z)g(z)=1$, where $g(z)$ is the sought-after function, and solve for coefficients for $g(z)$ iteratively.)
+    \item For practice, carry this out on $1/e^z$ and verify that you get the Taylor series for $e^{-z}$.
+    \item Carry this out on $\sec z=1/\cos z$.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  What is the radius of convergence of the Taylor series of $\dfrac{\cos z}{z-5}$ around $z=i$? (\emph{Hint}: Do not try to compute this series. It is very ugly.)
+\end{problem}
+
+\begin{problem}
+  Find the Laurent series expansion for $f(z)=\dfrac 1{z-3}$, around $z=5$, that is valid in the region $|z-5| >2$.
+\end{problem}
+
+\begin{problem}
+  Which coefficients in the Laurent series of $\csc z=1/\sin z$ around $z=0$ are nonzero? How do you know?
+  
+  Compare with $1/\cos z$ from 2(c). Why did that one not have any negative exponents?
+\end{problem}
+
+\begin{problem}
+  Suppose $f(z)$ is holomorphic on $\bC$ except for isolated singularities. Let $a\in\bC$ be a singularity of $f$ and suppose $f$ has a Laurent series
+  \[\sum_{n=-\infty}^\infty c_n (z-a)^n,\]
+  which converges in a punctured disk $0<|z-a|<r_2$. Classify the type of singularity at $a$ (removable, pole, or essential) according to the numbers $c_n$. Give reasoning.
+\end{problem}
+
+\begin{problem}[Ahlfors 5.1.3.1]
+  Write $\dfrac 1{1+z^2}$ in powers of $z-a$, for $a$ a real number. Find the general coefficient, and for $a=1$ further reduce this coefficient to simplest form.
+
+  \emph{Hint}: Do partial fractions first, then use the geometric series method.
+\end{problem}
+\newpage
+
+The following problems are review of concepts since the first exam.
+
+\begin{problem}
+  True or false: The partial fraction decomposition of
+  \[\frac 2{z^2(z+1)^2}\]
+  is of the form
+  \[\frac A{z^2}+\frac B{(z+1)^2},\]
+  where $A$ and $B$ are constants.
+\end{problem}
+
+\begin{problem}
+  Classify zeros and singularities of $\frac{e^z-1}{(z-2)^7(z-4)}$ on the extended complex plane. More specifically, for each zero or singularity, give its order and, if it is a singularity, say what type of singularity it is (removable, pole, or essential). 
+\end{problem}
+
+\begin{problem}
+  What is the order of $z$ at $\infty$? What is the order of $z\,dz$ at $\infty$?
+\end{problem}
+
+\begin{problem}
+  Give an example of a function on $\bC$ which has an essential singularity at $z=3$ and is holomorphic everywhere else, including at $\infty$. (Try to what remember what ``holomorphic at $\infty$'' means as well.)
+\end{problem}
+
+\begin{problem}
+  State and prove the ``coefficient of $(z-a)^{-1}$'' rule for calculating residues at $z=a$.
+  
+  \emph{Hint}: The proof has to do with the fact that, for example, $(z-a)^{-2}$ has a well-defined single-valued antiderivative in any punctured open neighborhood of $a$.
+\end{problem}
+
+\begin{problem}
+  Prove the ``simple pole trick'' for the calculation of residues. What was the condition to use it?
+\end{problem}
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item Let $f(z)$ be a polynomial of degree $n$, and consider an extremely large circle $C$ (radius larger than $10^{100}$ times the absolute values of all the coefficients of $f(z)$). What is $n(f(C),0)$, the winding number of $f(C)$ around the origin? Explain this from the perspective that $f(z)$ is ``basically'' $z^n$ for such large $z$, and also from the perspective using the fact that this large circle contains all the roots of $f$.
+    
+    \item Let $f(z)=e^z$, and let $\gamma$ be a circle of radius 12 around $z=i$. What is the winding number of the image curve $f(\gamma)$ around the origin? Approach this question from at least 2 different perspectives.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Compute the residue of $\dfrac 1{1+z^3}$ at $z=e^{i\pi/3}$.
+\end{problem}
+
+\begin{problem}
+  Evaluate the integral
+  \[\int_\gamma\frac{z^5-10z^2+5}{(z-i)^4}\,dz\]
+  where $\gamma$ is any simple \textbf{clockwise} closed loop around $i$.
+\end{problem}
+
+\begin{problem}
+  Evaluate the integral
+  \[\int_0^{2\pi}\frac 1{5+3\cos\theta}\,d\theta.\]
+\end{problem}
+
+\vfill
+
+Next page has remarks. Stop reading if you don't want to be spoiled!
+
+\newpage
+
+\section{Remarks (to some problems)}
+
+\begin{remark} %1
+  
+\end{remark}
+
+\begin{remark} %2
+  
+\end{remark}
+
+\begin{remark} %3
+  The only pole of the function is at $z=5$. So just find the largest open disk around $i$ that doesn't hit a pole. Use the Pythagorean theorem.
+\end{remark}
+
+\begin{remark} %4
+  If you write an infinite sum of positive powers of $(z-5)$, this will converge in the disk $|z-5|<2$. You need to write it as an infinite sum of negative powers of $(z-5)$ instead. Let $w=1/(z-5)$ and try to massage $1/(z-3)$ into a geometric series involving positive powers of $w$.
+\end{remark}
+
+\begin{remark} %5
+  The key difference between $1/\sin z$ and $1/\cos z$ is that $\cos 0=1$, meaning that $1/\cos z$ does not have a pole at $z=0$.
+\end{remark}
+
+\begin{remark} %6
+  Count the number of $c_n\neq0, n<0$. If infinite, essential. If finite, pole. If zero, removable.
+\end{remark}
+
+\begin{remark} %7
+  
+\end{remark}
+
+\begin{remark} %8
+  False. There should be $C/z$ and $D/(z+1)$ terms too.
+\end{remark}
+
+\begin{remark} %9
+  c.f. exam 1 problem 2(b). The difference is this is not a rational function due to the presence of $e^z$.
+\end{remark}
+
+\begin{remark} %10
+  $-1$ and $-3$, respectively. (Remember how I said that $dz$ adds $-2$ to the order of any function at $\infty$!)
+  
+  Advanced explanation ahead (cover your eyes): The element $z\,dz$ is no longer a function but a section of a line bundle on $\mathbb P^1$ (the (complex) projective line, what we called $\widetilde\bC$ in this class), called the cotangent bundle, aka the bundle of differential forms.  A line bundle is essentially a generalization of a function space, and a section of a line bundle is a generalization of a function. The cotangent bundle on $\mathbb P^1$ is also denoted by $\mathcal O(-2)$, which indicates the fact that there is a ``twisting'' of $-2$ in this line bundle. This explains the shifting of order at $\infty$ by $-2$. In fact, the element $dz$ itself is holomorphic everywhere except at $\infty$, and has a pole of order 2 at $\infty$.
+
+  Cotangent bundles are important because it turns out that the ``true'' type of things you integrate on any space are not functions, but differential forms.
+\end{remark}
+
+\begin{remark} %11
+  Start with $e^{1/z}$ and do some linear shift of variable.
+\end{remark}
+
+\begin{remark} %12
+  
+\end{remark}
+
+\begin{remark} %13
+  
+\end{remark}
+
+\begin{remark} %14
+  Keyword: argument principle.
+\end{remark}
+
+\begin{remark} %15
+\end{remark}
+
+\begin{remark}
+  I got $20\pi i$ using the residue theorem. The residue of the integrand at $i$ is $-10$, we multiply by $2\pi i$ and then by $-1$ since the orientation is opposite of the default counterclockwise orientation.
+\end{remark}
+
+\begin{remark}
+  
+\end{remark}
+
+\end{document}

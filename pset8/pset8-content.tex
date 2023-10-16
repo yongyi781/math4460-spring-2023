@@ -1,0 +1,62 @@
+\maketitle
+
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}}}
+
+This problem set is due on Wednesday, April 5 at 11:59 pm. Each problem part is worth 3 points. Collaboration is encouraged. In all cases, you must write your own solutions, and and you must cite collaborators and resources used.
+
+\begin{problem}
+  Partial fractions and residues.
+  \begin{enumerate}[(a)]
+    \item Suppose $f(z)$ is a rational function with only simple poles in $\bC$ (and $f(\infty)=0$). Suppose you know the residues at each of those poles. Discuss how to determine the partial fraction decomposition of $f$ based on this information.
+    \item Why doesn't part (a) work (that is, why can't you determine the partial fraction decomposition of $f$ solely based on its residues) when $f$ has a pole with multiplicity greater than 1?
+    \item Let $f(z)=12z^{11}/(z^{12}-1)$, which is a function you encountered on a previous problem set. Use the ideas from this problem to determine the partial fraction decomposition of $f$.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Let $f$ be a holomorphic function in a region $\Omega$, let $a\in\gamma$, and let $\gamma$ be a curve in $\Omega$ such that $n(\gamma,a)=1$.
+  \begin{enumerate}[(a)]
+    \item If you take the integral in the statement of Cauchy's integral formula:
+    \[\frac 1{2\pi i}\int_\gamma \frac{f(z)}{z-a}\,dz,\]
+    and use the residue theorem to compute it, show that you get back $f(a)$.
+    \item If you take the integral in the statement of Cauchy's integral formula for derivatives:
+    \[\frac{n!}{2\pi i}\int_\gamma \frac{f(z)}{(z-a)^{n+1}}\,dz,\]
+    and use the residue theorem to compute it, show that you get back $f^{(n)}(a)$.
+
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  \leavevmode\begin{enumerate}[(a)]
+    \item Let $f(z)$ be a polynomial, so we can write $f(z)=a_nz^n+\cdots+a_1z+a_0$. Calculate $\Res_\infty f(z)\,dz$ explicitly by making the substitution $z=1/w$, $dz=-dw/w^2$ and turning the calculation of a residue at $z=\infty$ into the calculation of a residue at $w=0$.
+    \item Use the same method to calculate $\displaystyle\Res_\infty\frac{dz}{(z-a)^m}$ where $a$ is a complex number and $m$ is a positive integer.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Evaluate
+  \[\int_0^{\pi/2}\frac{dx}{a+\sin^2 x},\]
+  where $a$ is a complex number such that $|a|>1$.
+\end{problem}
+
+\begin{problem}
+  Show that
+  \[\int_{-\infty}^\infty\frac 1{x^6+1}\,dx=\frac{2\pi}3.\]
+\end{problem}
+
+\begin{problem}
+  Show that
+  \[\int_{-\infty}^\infty\frac {x^2}{x^4+1}\,dx=\frac{\sqrt2}2\pi.\]
+\end{problem}
+
+\begin{problem}
+  Let $n$ be a positive integer. Use the method of residues to calculate
+  \[\int_0^{2\pi}(\cos\theta)^{2n}\,d\theta.\]
+  \emph{Hint}: See footnotes to check your answer.\footnote{The answer is ${2\pi}\cdot 4^{-n}\binom{2n}{n}$.}
+\end{problem}
+
+\begin{problem}
+  This is a space to reflect on something about this problem set. You can mention if you found any problems particularly difficult, or particularly easy. You can also mention problems you liked, or problems that took a long time, etc. (Please write something here to get credit!)
+\end{problem}

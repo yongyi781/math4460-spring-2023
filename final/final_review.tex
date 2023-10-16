@@ -1,0 +1,257 @@
+\documentclass[11pt,oneside]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,parskip,mathtools,microtype}
+\usepackage[shortlabels]{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{remark}{Remark}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\eps}{\varepsilon}
+
+\DeclareMathOperator{\Var}{Var}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Res}{Res}
+
+\title{MATH4460 Spring 2023\\
+Final Exam Review}
+
+\begin{document}
+\maketitle
+
+\begin{problem} %1
+  Verify that $(\sqrt2-i)-i(1-\sqrt2 i)=-2i$.
+\end{problem}
+
+\begin{problem} %2
+  Reduce
+  \[\frac{5i}{(1-i)(2-i)(3-i)}\]
+  to a real number.
+\end{problem}
+
+\begin{problem} %3
+  Graph the region $\{z\colon |z-4i+2| >2\}$ in the complex plane.
+\end{problem}
+
+\begin{problem} %4
+  Show that $|z_1-z_2|^2+|z_1+z_2|^2=2(|z_1|^2+|z_2|^2)$ for all $z_1,z_2\in\bC$.
+\end{problem}
+
+\begin{problem} %5
+  If we write $\overline{\exp(z^2)}$ as $u(x,y)+iv(x,y)$, what are the functions $u$ and $v$?
+\end{problem}
+
+\begin{problem} %6
+  For $f(z)$ the principal branch of $z^{-i}$, what is $f(i)$?
+\end{problem}
+
+\begin{problem} %7
+  Compute the limit $\lim_{z\to 0}\frac{\Im z}z$.
+\end{problem}
+
+\begin{problem} %8
+  Explain why the function $2z^2-3-ze^z+e^{-z}$ is entire.
+\end{problem}
+
+\begin{problem}
+  We know $e^z$ is periodic with period $2\pi i$. Is $e^{z^2}$ periodic? Prove it.
+\end{problem}
+
+\begin{problem} %9
+  Where is the branch cut of $\arctan(z)$?
+\end{problem}
+
+\begin{problem}
+  Calculate, via parametrization, the contour integral
+  \[\int_C\frac{z^2-1}z\,dz\]
+  where $C$ is the semicircle $z=2e^{i\theta}\ (0\leq \theta\leq\pi)$.
+\end{problem}
+
+\begin{problem}
+  Let $C_R$ be the circle with radius $R$, center 0, oriented counterclockwise. Show that
+  \[\lim_{R\to\infty}\int_{C_R}\frac{z^2+4z+7}{(z^2+4)(z^2+2z+2)}\,dz=0.\]
+  Looking at the order of the integrand (with the $dz$ term included) at $\infty$ may help.
+\end{problem}
+
+\begin{problem}
+  Let $f(z)$ be an entire function satisfying $|f(z)|\leq |z|^2$ for all $z$. Prove that in fact, $f(z)=az^2$ for some constant $a$ satisfying $|a|\leq 1$.
+\end{problem}
+
+\begin{problem}
+  If $f(z)$ is a polynomial of degree 3, $\gamma$ is the unit circle centered at 0, and you know that $f(\gamma)$ has winding number 0 around 0, what does this tell you about the function $f(z)$?
+\end{problem}
+
+\begin{problem}
+  Compute the integral
+  \[\int_0^\infty\frac{\cos x}{x^4+1}\,dx.\]
+  (I apologize for the heavy computation! You don't have to do this one if you dislike computations.)
+\end{problem}
+
+\begin{problem}
+  What is the leading exponent (i.e.\ the smallest exponent) in the Laurent series of
+  \[\frac{z^2+z}{(1-z)^2}\]
+  at $z=-1$?
+\end{problem}
+
+\begin{problem}
+  What is the Laurent series at $z=0$ of
+  \[\frac 1{z^7(1-z-z^2)}?\]
+  What is the singular part of the same function at $z=0$?
+\end{problem}
+
+\begin{problem}
+  For each function below, classify all its singularities in $\widetilde\bC$, write the singular part of the function at each singularity (not including $\infty$), and compute the residue of the function at each singularity (not including $\infty$).
+  \begin{enumerate}[(a)]
+    \item $f(z)=\dfrac{e^z-1}{z^{2011}}$.
+    \item $f(z)=\dfrac 1{z^7(1-z-z^2)}$.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}
+  Does $\exp\left(\dfrac{z+i}{z-i}\right)$ have an essential singularity at $\infty$? Think carefully! If not, where is the essential singularity?
+\end{problem}
+
+\begin{problem}
+  Prove that $\zeta(s)$ has zeros at every negative even integer.
+\end{problem}
+
+\begin{problem}
+  The integral representation
+  \[\Gamma(z)=\int_0^\infty e^{-t}t^{z-1}\,dt,\quad \Re z>0\]
+  permits us to evaluate the probability integral
+  \[\int_0^\infty e^{-t^2}\,dt=\frac 12\int_0^\infty e^{-x}x^{-\frac12}\,dx=\frac 12\Gamma\left(\frac12\right)=\frac 12\sqrt{\pi}.\]
+  What $u$-substitution was used here? Use this result along with another clever $u$-substitution to compute the Fresnel integrals
+  \[\int_0^\infty\sin(x^2)\,dx,\qquad\int_0^\infty\cos(x^2)\,dx.\]
+\end{problem}
+
+\vfill
+
+Next page has remarks. Stop reading if you don't want to be spoiled!
+
+\newpage
+
+\section{Remarks (to some problems)}
+
+\begin{remark} %1
+  
+\end{remark}
+
+\begin{remark} %2
+  Answer: $-\frac12$.
+\end{remark}
+
+\begin{remark} %3
+\end{remark}
+
+\begin{remark} %4
+\end{remark}
+
+\begin{remark} %5
+  $u(x,y)=e^{x^2-y^2}\cos(2xy)$ and $v(x,y)=ie^{x^2-y^2}\sin(2xy)$.
+\end{remark}
+
+\begin{remark} %6
+  $f(i)=i^{-i}=\exp(-i\Log(i))=\exp(-i(\pi i/2))=e^{\pi/2}$.
+\end{remark}
+
+\begin{remark} %7
+  The limit doesn't exist.
+\end{remark}
+
+\begin{remark} %8
+\end{remark}
+
+\begin{remark} %9
+  Not periodic. Proof: If $e^{z^2}$ were periodic with period $T>0$, then this says that $e^{(z+T)^2}=e^{z^2}$ for all $z$, which simplifies down to saying that $e^{T^2}e^{2zT}=1$ for all $z$. Now $e^{T^2}$ is constant, so periodicity would imply that the function $e^{2zT}$ is constant, which it is clearly not.
+\end{remark}
+
+\begin{remark} %10
+  Since $\arctan(z)=\frac i2\log\frac{i+z}{i-z}$, and the branch cut of $\log z$ is the negative real axis, the branch cut of $\arctan z$ is the set of complex numbers $z$ such that $\frac{i+z}{i-z}=-c$ for some $c\in\bR$ such that $c>0$. We solve this equation to get
+  \[i+z=-ci+cz\iff (c-1)z=i(c+1)\iff z= i\frac{c+1}{c-1}.\]
+  For $0<c<1$ this traces out the segment from $-i$ to $-i\infty$, and for $c>1$ this traces out the segment from $i$ to $i\infty$. So the branch cut of $\arctan z$ is $i(-\infty,-1]\cup i[1,\infty)$.
+\end{remark}
+
+\begin{remark} %11
+  Answer: $-\pi i$.
+\end{remark}
+
+\begin{remark} %12
+  Let $f(z)=\frac{z^2+4z+7}{(z^2+4)(z^2+2z+2)}$. We have by inspection that $\ord_{\infty}f(z)=-\deg f=-(-2)=2$, so $\ord_\infty f(z)\,dz=2-2=0$. So $\infty$ isn't a pole of $f(z)\,dz$ (even though it is a pole of $f(z)$!), so automatically the residue of $f(z)\,dz$ at $\infty$ is 0. That's the same as saying the integral in the question is 0, since residue at $\infty$ is the negative of that integral by definition.
+\end{remark}
+
+\begin{remark} %13
+  Look at $g(z)=f(z)/z^2$. We immediately have $|g(z)|\leq 1$ for all $z$ where $g$ is defined. We can almost use Liouville's theorem but we need to deal with the issue of a possible singularity at 0. However, $g$ stays bounded near 0, so 0 can't be a pole of $g$. Also, 0 can't be an essential singularity since that would imply $f(z)=z^2 g(z)$ also has an essential singularity at 0. The only possibility left is that the singularity at 0 for $g(z)$ is actually removable, so we can finally use Liouville's theorem (since $g(z)$ is entire and bounded), to conclude that $g(z)$ is a constant, which immediately finishes the problem.
+\end{remark}
+
+\begin{remark} %14
+  By the definition of winding number and the argument principle,
+  \[n(0,f(\gamma))=0\iff\frac 1{2\pi i}\int_{f(\gamma)}\frac 1z\,dz=0\iff \int_\gamma \frac{f'(z)}{f(z)}\,dz=0\iff \text{(\# zeros $-$\# poles) in }\gamma=0.\]
+  But polynomials have no poles in $\bC$, so this says that $\gamma$, the unit circle, encloses no zeros of $f(z)$, or in other words, all roots of $f$ have magnitude greater than 1.
+\end{remark}
+
+\begin{remark} %15
+  The answer is
+  \[\frac{\pi e^{-1/\sqrt 2}}{2\sqrt 2}\left( \cos\left( \frac 1{\sqrt2} \right) +\sin\left( \frac 1{\sqrt 2} \right)\right).\]
+\end{remark}
+
+\begin{remark} %16
+  The leading exponent of the Laurent series of $f$ at $z=-1$ is the same thing as the order at $-1$ of $f$. If we plug $-1$ into the function, we get 0. When we take the derivative and plug in $-1$, we get a nonzero number. So the order is 1, so the leading exponent is 1. So the Laurent series is also a Taylor series!
+\end{remark}
+
+\begin{remark} %17
+  From a problem set, we know that $z/(1-z-z^2)=\sum_{n=1}^\infty f_nz^n$ where $f_n$ is $n$th term of the Fibonacci sequence. The given rational function is this one divided by $z^8$, so our Laurent series is
+  \[\sum_{n=1}^\infty f_n z^{n-8}=\sum_{n=-7}^\infty f_{n+8}z^n=z^{-7}+z^{-6}+2z^{-5}+3z^{-4}+\cdots.\]
+  The singular part is given by all the negative exponent terms:
+  \[\sum_{n=-7}^{-1}f_{n+8}z^n.\]
+\end{remark}
+
+\begin{remark} %18
+  \leavevmode\begin{enumerate}[(a)]
+    \item There is a pole of order 2010 (not 2011!) at 0, since the zero of order 1 of $e^z-1$ cancels out one pole from the denominator. There is an essential singularity at $\infty$.
+    At 0: we can compute the series of the whole thing: $e^z-1=\sum_{n=1}^\infty\frac{z^n}{n!}$, so
+    \[\frac{e^z-1}{z^{2011}}=\sum_{n=1}^\infty\frac{z^{n-2011}}{n!}.\]
+    The singular part is the sum of all negative exponent terms, which is
+    \[\sum_{n=1}^{2010}\frac{z^{n-2011}}{n!}\]
+    and the residue at 0 is the coefficient of the $z^{-1}$ term, which occurs at $n=2010$, thus the residue at 0 is $\frac 1{2010!}$.
+
+    \item No singularity (could also say removable singularity) at $\infty$. Pole at 0 of order 7. Simple poles at $1/\varphi$ and $-\varphi$, where $\varphi$ is the golden ratio, $(1+\sqrt 5)/2$.
+    
+    For the pole at 0, we already found the singular part in the previous problem. The residue is the coefficient of $z^{-1}$ which is $f_{-1+8}=f_7=13$.
+
+    For the other poles, the simple pole trick applies since they are simple poles. This will give us the residue, and in turn the singular part (which now consists of only one term). First, notice that $1-z-z^2=-(z^2+z-1)=-(z-1/\varphi)(z+\varphi)$. We compute
+    \[\Res_{1/\varphi} f(z)\,dz=\lim_{z\to1/\varphi}-\frac{z-1/\varphi}{z^7(z-1/\varphi)(z+\varphi)}=-\frac {\varphi^7}{1/\varphi+\varphi}\]
+    and
+    \[\Res_{-\varphi} f(z)\,dz=\lim_{z\to-\varphi}-\frac{z+\varphi}{z^7(z-1/\varphi)(z+\varphi)}=-\frac 1{\varphi^7(\varphi+1/\varphi)}.\]
+    In fact you didn't need to do the last residue computation: $f(z)\,dz$ has no pole at $\infty$ (its order at $\infty$ is $9-2=7>0$), so $\Res_\infty f(z)\,dz=0$, so we automatically know the residue at $-\varphi$ is negative the sum of 13 and $\frac {\varphi^7}{1/\varphi+\varphi}$ since the sum of residues of a meromorphic function must add to 0. Actually, if we frame what we did another way, we can consider ourselves to have proved the fascinating identity
+    \[\frac {\varphi^7}{1/\varphi+\varphi}+\frac 1{\varphi^7(\varphi+1/\varphi)}=\frac{\varphi^7+1/\varphi^7}{\varphi+1/\varphi}=13,\]
+    without any brute-force computation at all! Mind-blowing.
+  \end{enumerate}
+\end{remark}
+
+\begin{remark} %19
+  Nope! At $z=\infty$ the function $f(z)=(z+i)/(z-i)$ (i.e.\ the inner function) takes on the value 1 since that is the limit of $f(z)$ as $z\to\infty$. Therefore $\exp\left(\dfrac{z+i}{z-i}\right)$ takes on the value $e^1=e$ at $z=\infty$. The essential singularity instead occurs when $f(z)=\infty$, and that happens when $z=i$.
+\end{remark}
+
+\begin{remark} %20
+  Using the functional equation is the easiest: $\zeta(-2k)=\zeta(1-(2k+1))$ has a $\cos$ term which vanishes.
+\end{remark}
+
+\begin{remark} %21
+  The substitution $t=\sqrt x$ (equivalently, $x=t^2$) was used. Both of the Fresnel integrals are equal to $\frac 12\sqrt{\pi/2}$. The clever $u$-substitution for the Fresnel integrals is to look at the integral
+  \[\int_0^\infty e^{ix^2}\,dx\]
+  of which the Fresnel integrals are the imaginary and real parts respectively, and to perform the substitution $x=\sqrt i\cdot t$, $dx=\sqrt i\,dt$.
+\end{remark}
+
+\end{document}
